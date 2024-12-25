@@ -1,4 +1,3 @@
-/* Keyframes remain the same */
 @keyframes wizz {
   0% {
     transform: translateX(-1vw) rotate(-3deg);
@@ -34,10 +33,7 @@
     transform: translateX(0) rotate(0deg);
   }
 }
-
-/* Base styles for all screens */
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -51,38 +47,35 @@ body {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/238916/1200x768_fond-ecran-defaut-windows-xp.jpeg");
   background-size: cover;
 }
-
 .chat-wrapper .chat {
-  width: 80%; /* Adjust width for responsiveness */
-  max-width: 497px; /* Preserve original design for larger screens */
-  height: auto; /* Allow height to adjust */
+  width: 497px;
+  height: 502px;
   border-radius: 5px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 10%; /* Adjust padding for smaller screens */
+  padding: 85px 165px 170px 20px;
   box-sizing: border-box;
   margin: auto;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/238916/msn.png");
-  background-size: contain; /* Ensure background scales correctly */
-  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .status {
   position: absolute;
   top: 22px;
-  left: 10%;
-  font-size: 10px; /* Reduced font size */
+  left: 33px;
+  font-size: 12px;
   color: grey;
 }
 
 .is-writting {
   position: absolute;
   bottom: 30px;
-  left: 10%;
-  font-size: 10px; /* Reduced font size */
+  left: 16px;
+  font-size: 12px;
   color: grey;
 }
 
@@ -93,7 +86,7 @@ body {
   top: 94px;
   right: 22px;
   bottom: 0;
-  background-image: url("https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/457106119_10234292177304688_6829470138294608272_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=b04a48&_nc_ohc=rwC6NwEvlDUQ7kNvgGkdEYk&_nc_zt=23&_nc_ht=scontent-fra5-2.xx&_nc_gid=A9thxqC_RMjOPu3kXd-VlMn&oh=00_AYAKpb289G1NcVk51QP8uIrRKpC743JD6NBwM-cy_m5YyA&oe=6771AF9F");
+  background-image: url("https://scontent-fra3-2.xx.fbcdn.net/v/t39.30808-6/461764374_3764708657136203_1717445219188607040_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=fiHAGehpn8QQ7kNvgFIkqbu&_nc_zt=23&_nc_ht=scontent-fra3-2.xx&_nc_gid=ACFR7hfJHPHhNHjnCuceW6I&oh=00_AYAoIba76UI8rhKPfJUccqHbtgAtFtYzNy7KyBAAVpK70w&oe=6771B7D0");
   background-size: cover;
   background-color: #fafafa;
 }
@@ -105,22 +98,23 @@ body {
   top: 357px;
   right: 22px;
   bottom: 0;
-  background-image: url("https://scontent-fra3-2.xx.fbcdn.net/v/t39.30808-6/461764374_3764708657136203_1717445219188607040_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=fiHAGehpn8QQ7kNvgFIkqbu&_nc_zt=23&_nc_ht=scontent-fra3-2.xx&_nc_gid=ACFR7hfJHPHhNHjnCuceW6I&oh=00_AYAoIba76UI8rhKPfJUccqHbtgAtFtYzNy7KyBAAVpK70w&oe=6771B7D0");
+  background-image: url("https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/457106119_10234292177304688_6829470138294608272_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=b04a48&_nc_ohc=rwC6NwEvlDUQ7kNvgGkdEYk&_nc_zt=23&_nc_ht=scontent-fra5-2.xx&_nc_gid=A9thxqC_RMjOPu3kXd-VlMn&oh=00_AYAKpb289G1NcVk51QP8uIrRKpC743JD6NBwM-cy_m5YyA&oe=6771AF9F");
   background-size: cover;
   background-color: #fafafa;
 }
+
 .chat.wizz {
   animation: wizz 0.5s ease-in-out 1 backwards;
 }
 
 .chat-container {
-  overflow-y: auto; /* Make scrolling available */
-  width: 100%; /* Adjust width */
-  height: 30vh; /* Adjust height to fit mobile screens */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 2315px;
+  height: 245px;
   position: relative;
   z-index: 0;
 }
-
 .chat-container:before {
   content: "";
   position: absolute;
@@ -135,9 +129,8 @@ body {
 .name {
   position: absolute;
   top: 4px;
-  left: 10%; /* Adjust placement */
+  left: 32px;
   font-weight: bold;
-  font-size: 14px; /* Adjust font size */
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -150,31 +143,25 @@ ul {
 li {
   padding-top: 4px;
 }
-
 li.one {
   color: red;
 }
-
 li.two {
   color: blue;
 }
-
 li:first-child {
   padding-top: 10px;
 }
-
 li label {
-  font-size: 10px; /* Reduced font size */
+  font-size: 12px;
 }
-
 li label img {
-  width: 10px; /* Scaled down for mobile */
-  height: 10px;
+  width: 15px;
+  height: 15px;
   margin-left: 3px;
   margin-right: 3px;
   display: inline;
 }
-
 li label:first-child {
   display: block;
   color: rgba(0, 0, 0, 0.6);
@@ -182,25 +169,4 @@ li label:first-child {
 
 html {
   font-family: Sans, sans-serif;
-}
-
-/* Media Queries for Mobile */
-@media (max-width: 768px) {
-  .chat-wrapper .chat {
-    padding: 5%; /* Adjust padding */
-  }
-
-  .status,
-  .is-writting {
-    font-size: 8px; /* Smaller font for mobile */
-  }
-
-  .avatar-1,
-  .avatar-2 {
-    width: 15%; /* Adjust avatar size */
-  }
-
-  .chat-container {
-    height: 40vh; /* Allow more scrolling space */
-  }
 }
