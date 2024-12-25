@@ -34,7 +34,7 @@
   }
 }
 html {
-  transform: scale(0.9); /* Adjust the scale factor (0.9 = 90% zoom) */
+  transform: scale(1.7); /* Adjust the scale factor (0.9 = 90% zoom) */
   transform-origin: top left; /* Set the origin for scaling */
   overflow: hidden; /* Prevent scrollbars caused by scaling */
 }
