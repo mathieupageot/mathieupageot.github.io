@@ -33,6 +33,11 @@
     transform: translateX(0) rotate(0deg);
   }
 }
+html {
+  transform: scale(0.9); /* Adjust the scale factor (0.9 = 90% zoom) */
+  transform-origin: top left; /* Set the origin for scaling */
+  overflow: hidden; /* Prevent scrollbars caused by scaling */
+}
 html, body {
   margin: 0;
   padding: 0;
